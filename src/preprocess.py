@@ -21,9 +21,8 @@ def main():
     y_train = np.load("data/raw/y_train.npy")
     x_test = np.load("data/raw/x_test.npy")
     y_test = np.load("data/raw/y_test.npy")
-
-    x_train = np.clip(x_train.astype("float32") / 255.0, 0.0, 1.0)
-    x_test = np.clip(x_test.astype("float32") / 255.0, 0.0, 1.0)
+    x_train = np.clip((x_train.astype("float32") / 255.0) * 0.9, 0.0, 1.0)
+    x_test = np.clip((x_test.astype("float32") / 255.0) * 0.9, 0.0, 1.0)
     x_train, x_val, y_train, y_val = train_test_split(
         x_train,
         y_train,
