@@ -13,3 +13,5 @@ Build a fully connected Artificial Neural Network to classify Fashion-MNIST imag
 - Git
 - DVC
 - Google Drive
+
+Project maintained for Assignment 3.
